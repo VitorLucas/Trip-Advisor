@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenAI" Version="1.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Trip.Advisor.Be.Core\Trip.Advisor.Be.Core.csproj" />
+    <ProjectReference Include="..\Trip.Advisor.Be.Domain\Trip.Advisor.Be.Domain.csproj" />
+    <ProjectReference Include="..\Trip.Advisor.Be.Infrastructure\Trip.Advisor.Be.Infrastructure.csproj" />
+    <ProjectReference Include="..\Trip.Advisor.Be.Core\Trip.Advisor.Be.Core.csproj" />
+    <ProjectReference Include="..\Trip.Advisor.Be.Domain\Trip.Advisor.Be.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
