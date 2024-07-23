@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 
-namespace  Trip.Advisor.Be.Api.ApiKeyAuth
+namespace  Trip.Advisor.Be.Api.ApiKeyAuth;
+
+public class ApiKeyRequirement : IAuthorizationRequirement
 {
-    public class ApiKeyRequirement : IAuthorizationRequirement
-    {
-    }
 }

@@ -1,12 +1,11 @@
 ﻿using Microsoft.Extensions.Logging;
 using System.Net;
-using Trip.Advisor.Be.Core;
 using Trip.Advisor.Be.Core.Helpers;
 using Trip.Advisor.Be.Core.Notifications;
 using Trip.Advisor.Be.Domain.Arguments.OpenIA;
 using Trip.Advisor.Be.Domain.Arguments.Trip;
 
-namespace  Trip.Advisor.Be.Application.Services.OpenIa;
+namespace Trip.Advisor.Be.Application.Services.OpenIa;
 
 public class PromptService : ServiceBase, IPromptService
 {

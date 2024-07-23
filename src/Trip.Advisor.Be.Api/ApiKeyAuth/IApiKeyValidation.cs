@@ -1,7 +1,6 @@
-﻿namespace  Trip.Advisor.Be.Api.ApiKeyAuth
+﻿namespace  Trip.Advisor.Be.Api.ApiKeyAuth;
+
+public interface IApiKeyValidation
 {
-    public interface IApiKeyValidation
-    {
-        bool IsValidApiKey(string userApiKey);
-    }
+    bool IsValidApiKey(string userApiKey);
 }

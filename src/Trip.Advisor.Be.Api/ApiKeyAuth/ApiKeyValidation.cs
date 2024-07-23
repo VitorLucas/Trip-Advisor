@@ -1,25 +1,24 @@
-﻿namespace  Trip.Advisor.Be.Api.ApiKeyAuth
+﻿namespace  Trip.Advisor.Be.Api.ApiKeyAuth;
+
+public class ApiKeyValidation : IApiKeyValidation
 {
-    public class ApiKeyValidation : IApiKeyValidation
+    private readonly IConfiguration _configuration;
+
+    public ApiKeyValidation(IConfiguration configuration)
     {
-        private readonly IConfiguration _configuration;
+        _configuration = configuration;
+    }
 
-        public ApiKeyValidation(IConfiguration configuration)
-        {
-            _configuration = configuration;
-        }
+    public bool IsValidApiKey(string userApiKey)
+    {
+        if (string.IsNullOrWhiteSpace(userApiKey))
+            return false;
 
-        public bool IsValidApiKey(string userApiKey)
-        {
-            if (string.IsNullOrWhiteSpace(userApiKey))
-                return false;
+        string? apiKey = _configuration.GetValue<string>(Constants.ApiKeyName);
 
-            string? apiKey = _configuration.GetValue<string>(Constants.ApiKeyName);
+        if (apiKey == null || apiKey != userApiKey)
+            return false;
 
-            if (apiKey == null || apiKey != userApiKey)
-                return false;
-
-            return true;
-        }
+        return true;
     }
 }
