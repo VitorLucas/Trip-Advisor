@@ -7,4 +7,8 @@ Same instructions for Dockerfile
 
 `APIKey`
 
+## Environment variables
+Authention made by Apy-Key, the key is in appsettings.Development.json.
+
+`ApiKey`
 
